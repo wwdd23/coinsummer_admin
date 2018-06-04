@@ -36,8 +36,15 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'rails_admin', '~> 1.3'
+#gem 'rails_admin', '~> 1.3'
+gem 'rails_admin', :git => "https://github.com/sferik/rails_admin.git"
+
 gem 'rails_admin_material'
+gem 'rails_admin_history_rollback'
+gem 'paper_trail'
+
+gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
+
 
 
 gem 'font-awesome-rails'
@@ -46,6 +53,11 @@ gem 'jquery-rails'
 
 
 gem 'mongoid', '~> 6.2.0'
+gem 'mongoid-history'
+#gem 'mongoid_userstamp'
+
+
+
 gem 'bson_ext'
 
 gem "cancan"

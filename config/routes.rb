@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
 
+  root to: redirect('/admin')
   mount Ckeditor::Engine => '/ckeditor'
   #devise_for :admins
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   #devise_for :users, RailsAdmin::Devise.config
 

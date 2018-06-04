@@ -6,8 +6,7 @@ RailsAdmin.config do |config|
   config.main_app_name = Proc.new { |controller| [ "CoinSummer", "BackOffice - #{controller.params[:action].try(:titleize)}" ] }
   config.excluded_models = ['ActiveStorage::Blob', 'ActiveStorage::Attachment']
 
-  #config.included_models = [User, New,]
-
+#  config.audit_with :history, User
 
   config.model New do
     edit do
@@ -22,26 +21,11 @@ RailsAdmin.config do |config|
     end
   end
 
-  config.model Category do
-    object_label_method do
-      :custom_label_method
-    end
-  end
-
-  Category.class_eval do
-    def custom_label_method
-      "#{self.name_cn}"
-    end
-  end
-
-
 
   config.authenticate_with do
     warden.authenticate! scope: :user
   end
   config.current_user_method(&:current_user)
-
-
   ### Popular gems integration
 
   ## == Devise ==
@@ -57,7 +41,7 @@ RailsAdmin.config do |config|
   # config.authorize_with :pundit
 
   ## == PaperTrail ==
-  #config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
+  # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
@@ -77,7 +61,7 @@ RailsAdmin.config do |config|
     show_in_app
 
     ## With an audit adapter, you can add:
-    #history_index
-    #history_show
+    # history_index
+    # history_show
   end
 end

@@ -7,7 +7,7 @@ class New
   include Mongoid::History::Trackable
 
 
-  belongs_to :category , foreign_key: :category_id # 分类
+  belongs_to :category ,  :foreign_key => "category_id"  # 分类
 
 
   field :title, type: String

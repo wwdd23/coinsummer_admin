@@ -10,6 +10,27 @@ RailsAdmin.config do |config|
 
 
   config.model New do
+
+    list do 
+      field :title
+      field :category
+      field :created_at
+      field :pubdated_at
+      field :description
+      field :pv
+      field :uv
+    end
+
+    show do 
+      field :title
+      field :category
+      field :pv
+      field :uv
+      field :created_at
+      field :pubdated_at
+      field :description
+    end
+
     edit do
       field :title
       field :category
@@ -18,10 +39,10 @@ RailsAdmin.config do |config|
       field :source
       field :pubdated_at
       field :url
-
     end
   end
 
+  # f.input :content, :lable => "内容", as: :ckeditor , input_html: { ckeditor: {  height: '600px', width: '900px', toobar: {name: 'styles', items: [ 'Styles', 'Format', 'Font', 'FontSize' ]}}}
   config.model Category do
     object_label_method do
       :custom_label_method

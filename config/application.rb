@@ -1,6 +1,7 @@
 require_relative 'boot'
 
 require 'rails/all'
+require "active_storage"
 require "paper_trail"
 
 # Require the gems listed in Gemfile, including any gems
@@ -13,6 +14,8 @@ module CoinSummerAdmin
     config.load_defaults 5.2
     ENV['RAILS_ADMIN_THEME'] = 'material'
 
+
+    config.time_zone = 'Beijing'
 
     config.autoload_paths += %w(#{config.root}/app/models/ckeditor)
 

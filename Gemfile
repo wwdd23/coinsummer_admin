@@ -63,6 +63,7 @@ gem 'bson_ext'
 gem "cancan"
 gem 'devise'
 gem 'devise-i18n'
+gem 'devise-i18n-views'
 gem 'devise-bootstrap-views'
 
 
@@ -79,7 +80,11 @@ gem 'mini_magick'
 
 # 编辑器
 gem 'ckeditor'
+gem 'ckeditor-imgur'
+gem "paperclip"
 
+#unicorn
+gem 'unicorn'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

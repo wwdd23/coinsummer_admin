@@ -21,7 +21,8 @@ working_directory APP_PATH
 # 可同时监听 Unix 本地 socket 或 TCP 端口
 listen "/tmp/cs_admin.sock", :backlog => 64
 # 开启tcp 端口，可不使用 apache 或 nginx 做代理，直接本地：http://localhost:port
-listen 8083, :tcp_nopush => true
+#listen 8083, :tcp_nopush => true
+listen 8083, :tcp_nopush => false
 
 # 如果为 REE，则添加 copy_on_wirte_friendly
 # http://www.rubyenterpriseedition.com/faq.html#adapt_apps_for_cow

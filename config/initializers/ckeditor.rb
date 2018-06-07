@@ -6,10 +6,14 @@ Ckeditor.setup do |config|
   # available as additional gems.
   require 'ckeditor/orm/mongoid'
 
+
+
+
   # Allowed image file types for upload.
   # Set to nil or [] (empty array) for all file types
   # By default: %w(jpg jpeg png gif tiff)
   # config.image_file_types = %w(jpg jpeg png gif tiff)
+
 
   # Allowed flash file types for upload.
   # Set to nil or [] (empty array) for all file types
@@ -49,10 +53,13 @@ Ckeditor.setup do |config|
   # CKEditor CDN
   # More info here http://cdn.ckeditor.com/
   # By default: nil (CDN disabled)
-  # config.cdn_url = '//cdn.ckeditor.com/4.7.1/standard/ckeditor.js'
+  config.cdn_url = '//cdn.ckeditor.com/4.7.1/standard/ckeditor.js'
+  #config.cdn_url = '//cdn.ckeditor.com/ckeditor5/10.0.1/classic/ckeditor.js'
 
+   config.image_file_types = %w(jpg jpeg png gif tiff)
+   config.attachment_file_types = %w(doc docx xls odt ods pdf rar zip tar tar.gz swf)
   # JS config url
   # Used when CKEditor CDN enabled
   # By default: "ckeditor/config.js"
-  # config.js_config_url = 'ckeditor/config.js'
+   config.js_config_url = 'ckeditor/config.js'
 end

@@ -1,0 +1,10 @@
+# config/application.yml
+defaults: &defaults
+
+
+
+development:
+<<: *defaults
+
+test:
+<<: *defaults

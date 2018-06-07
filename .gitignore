@@ -16,6 +16,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+*.swp
 
 # Ignore uploaded files in development
 /storage/*
@@ -24,6 +25,7 @@
 /yarn-error.log
 
 /public/assets
+/public/uploads
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.

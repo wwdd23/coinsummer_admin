@@ -17,6 +17,7 @@ CKEDITOR.editorConfig = function( config )
 
   config.font_names = '微软雅黑;宋体;黑体;仿宋_GB2312;楷体_GB2312;隶书;幼圆;'+ config.font_names ;
 
+//  config.extraPlugins = 'embedsemantic';
 
 
   /* Filebrowser routes */
@@ -46,7 +47,7 @@ CKEDITOR.editorConfig = function( config )
   config.pasteFromWordRemoveFontStyles = false;
   config.pasteFromWordRemoveStyles = false;
 
-  config.toolbar = 'MyToolbar';
+  config.toolbar = 'Full';
 
   // Toolbar groups configuration.
   config.toolbar_full = [
@@ -77,14 +78,14 @@ CKEDITOR.editorConfig = function( config )
       { name: 'document',  items: [ 'Source','-','Save','NewPage','DocProps','Preview','Print','-','Templates' ] },
    { name: 'clipboard',  items: [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
    { name: 'links',    items:['Link','Unlink']},
-   { name: 'insert',   items:['HorizontalRule','Table','Image'] },
+   { name: 'insert',   items:['HorizontalRule','Table', 'Image' ] },
 
    '/',
    { name: 'basicstyles', items: [ 'Bold','Underline','Strike','Subscript','Superscript','-','RemoveFormat'] },
    { name: 'paragraph',  items: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
    { name: 'styles',items: ['lineheight','Format','Font','FontSize']},
    { name: 'colors',items: ['TextColor', 'BGColor']},
-   { name: 'tools', items : [ 'Maximize','editorupload'] }
+   { name: 'tools', items : [ 'Maximize','editorupload', 'Iframe'] }
     ];
 
 };
